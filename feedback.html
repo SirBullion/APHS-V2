@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback Form | All People Holistic Support</title>
+  <meta name="description" content="Share feedback with All People Holistic Support to help improve culturally safe disability services across Darwin and the Northern Territory." />
+  <meta name="keywords" content="NDIS feedback Darwin, disability service feedback NT, All People Holistic Support feedback" />
+  <meta name="author" content="All People Holistic Support Pty Ltd" />
+  <meta property="og:title" content="Feedback Form | All People Holistic Support" />
+  <meta property="og:description" content="Send service feedback to help improve support quality and participant experience." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aphsnt.com.au/feedback.html" />
+  <meta property="og:image" content="https://aphsnt.com.au/logo.png" />
+  <meta property="og:locale" content="en_AU" />
+  <link rel="canonical" href="https://aphsnt.com.au/feedback.html" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="logo.png" alt="All People Holistic Support Logo" class="logo" />
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="refer.html">Referrals</a></li>
+          <li><a href="careers.html">Work With Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1>Feedback Form</h1>
+      <p>
+        We value your feedback. Your comments help us strengthen service quality,
+        cultural safety, and participant outcomes.
+      </p>
+
+      <form
+        action="https://formspree.io/f/mwpbzdal"
+        method="POST"
+        data-ajax-form
+        data-status-id="feedback-status"
+        data-success-message="Thank you. Your feedback has been received."
+      >
+        <input type="hidden" name="form_type" value="service_feedback" />
+        <input type="hidden" name="source_page" value="feedback.html" />
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="visually-hidden" />
+
+        <label for="feedback-name">Full Name:</label>
+        <input type="text" id="feedback-name" name="full_name" required />
+
+        <label for="feedback-email">Email Address:</label>
+        <input type="email" id="feedback-email" name="email" required />
+
+        <label for="feedback-phone">Phone Number (Optional):</label>
+        <input
+          type="tel"
+          id="feedback-phone"
+          name="phone"
+          pattern="[0-9+()\-\s]{8,20}"
+          title="Please use 8 to 20 characters with digits, spaces, plus, brackets or hyphens."
+        />
+
+        <label for="feedback-topic">Feedback Topic:</label>
+        <select id="feedback-topic" name="feedback_topic" required>
+          <option value="">Select one</option>
+          <option value="service_quality">Service quality</option>
+          <option value="staff_support">Staff support</option>
+          <option value="communication">Communication</option>
+          <option value="cultural_safety">Cultural safety</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="feedback-message">Your Feedback:</label>
+        <textarea id="feedback-message" name="feedback_message" rows="6" required></textarea>
+
+        <button type="submit" class="btn">Submit Feedback</button>
+        <p id="feedback-status" class="form-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span class="js-current-year">2026</span> All People Holistic Support Pty Ltd. ABN 91 688 660 657. Serving Country, Community, and Culture.</p>
+      <p class="acknowledgement">
+        We acknowledge the Traditional Custodians of the lands we work on and pay our respects to Elders past, present and emerging.
+      </p>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+</body>
+</html>
