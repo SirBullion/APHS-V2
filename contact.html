@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | NDIS Provider Darwin</title>
+  <meta name="description" content="Contact All People Holistic Support, an NDIS provider in Darwin delivering culturally safe disability support services across the Northern Territory." />
+  <meta name="keywords" content="contact NDIS provider Darwin, disability services NT contact" />
+  <meta name="author" content="All People Holistic Support Pty Ltd" />
+  <meta property="og:title" content="Contact All People Holistic Support" />
+  <meta property="og:description" content="Get in touch for disability support, referrals, and community services across Darwin and the Northern Territory." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aphsnt.com.au/contact.html" />
+  <meta property="og:image" content="https://aphsnt.com.au/logo.png" />
+  <meta property="og:locale" content="en_AU" />
+  <link rel="canonical" href="https://aphsnt.com.au/contact.html" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="logo.png" alt="All People Holistic Support Logo" class="logo" />
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="refer.html">Referrals</a></li>
+          <li><a href="careers.html">Work With Us</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1>Contact Us</h1>
+
+      <p>
+        If you have questions about our services, would like to refer a participant,
+        or want to learn more about how we can support you or your community,
+        please contact us using the form below or through our direct contact details.
+      </p>
+
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/mwpbzdal"
+        method="POST"
+        data-ajax-form
+        data-status-id="contact-status"
+        data-success-message="Thank you for contacting us. We will get back to you shortly."
+      >
+        <input type="hidden" name="form_type" value="general_contact" />
+        <input type="hidden" name="source_page" value="contact.html" />
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="visually-hidden" />
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone Number:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          pattern="[0-9+()\-\s]{8,20}"
+          title="Please use 8 to 20 characters with digits, spaces, plus, brackets or hyphens."
+          required
+        />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+        <p id="contact-status" class="form-status" aria-live="polite"></p>
+      </form>
+
+      <div class="contact-details">
+        <h3>Other Ways to Reach Us</h3>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:info@aphsnt.com.au">info@aphsnt.com.au</a>
+        </p>
+        <p>
+          <strong>Phone:</strong>
+          <a href="tel:+61424949085">0424 949 085</a>
+        </p>
+        <p>
+          <strong>Service Areas:</strong> Darwin, Palmerston, Adelaide River,
+          Maningrida, Arnhem Land, and remote Northern Territory communities.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span class="js-current-year">2026</span> All People Holistic Support Pty Ltd. ABN 91 688 660 657. Serving Country, Community, and Culture.</p>
+      <p class="acknowledgement">
+        We acknowledge the Traditional Custodians of the lands we work on and pay our respects to Elders past, present and emerging.
+      </p>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+</body>
+</html>
