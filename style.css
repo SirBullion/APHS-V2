@@ -35,6 +35,8 @@ body {
     linear-gradient(rgba(14, 9, 6, 0.82), rgba(14, 9, 6, 0.88)),
     url("bg.gif") center center / cover no-repeat fixed;
   line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
 }
 
 img {
@@ -99,6 +101,24 @@ p {
   padding: 14px 0;
 }
 
+.site-nav {
+  display: block;
+}
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .logo {
   height: 82px;
   width: auto;
@@ -115,6 +135,9 @@ p {
 }
 
 .nav-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-weight: 700;
   font-size: 0.96rem;
   color: var(--text-main);
@@ -417,6 +440,7 @@ form select {
   background: rgba(255, 255, 255, 0.08);
   color: #fff;
   font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
 }
 
 form input::placeholder,
@@ -438,6 +462,7 @@ form button {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.25s ease;
+  min-height: 44px;
 }
 
 form button:hover {
@@ -505,6 +530,8 @@ form button:disabled {
   }
 
   .nav-links {
+    width: 100%;
+    justify-content: flex-start;
     gap: 10px;
   }
 }
@@ -524,8 +551,15 @@ form button:disabled {
   }
 
   .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 8px;
+  }
+
+  .nav-links a {
+    width: 100%;
+    justify-content: center;
   }
 
   .section {
@@ -540,5 +574,36 @@ form button:disabled {
 
   .cta-buttons {
     flex-direction: column;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .site-nav {
+    display: none;
+    width: 100%;
+  }
+
+  .site-nav.is-open {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 62px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.75rem, 8vw, 2.2rem);
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    grid-template-columns: 1fr;
   }
 }
