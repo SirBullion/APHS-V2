@@ -97,6 +97,9 @@
         <label for="complaint-outcome">Preferred Outcome (Optional):</label>
         <textarea id="complaint-outcome" name="preferred_outcome" rows="4"></textarea>
 
+        <!-- Cloudflare Turnstile bot protection -->
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAACscmaMVveLnEmmi"></div>
+
         <button type="submit" class="btn">Submit Complaint</button>
         <p id="complaint-status" class="form-status" aria-live="polite"></p>
       </form>
@@ -113,6 +116,7 @@
   </footer>
 
   <script src="site.js"></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
 </body>
 </html>
 

@@ -80,6 +80,9 @@
         <label for="message">Message:</label>
         <textarea id="message" name="message" rows="6" required></textarea>
 
+        <!-- Cloudflare Turnstile bot protection -->
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAACscmaMVveLnEmmi"></div>
+
         <button type="submit" class="btn">Send Message</button>
         <p id="contact-status" class="form-status" aria-live="polite"></p>
       </form>
@@ -119,6 +122,7 @@
 
   <script src="site.js"></script>
   <script src="js/contact.js"></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
 </body>
 </html>
 

@@ -93,6 +93,9 @@
           placeholder="Please provide a brief summary of support needs, goals, location, or any relevant referral information."
         ></textarea>
 
+        <!-- Cloudflare Turnstile bot protection -->
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAACscmaMVveLnEmmi"></div>
+
         <button type="submit" class="btn">Submit Referral</button>
         <p id="refer-status" class="form-status" aria-live="polite"></p>
       </form>
@@ -110,6 +113,7 @@
 
   <script src="site.js"></script>
   <script src="js/refer.js"></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
 </body>
 </html>
 

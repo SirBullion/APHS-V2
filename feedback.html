@@ -86,6 +86,9 @@
         <label for="feedback-message">Your Feedback:</label>
         <textarea id="feedback-message" name="feedback_message" rows="6" required></textarea>
 
+        <!-- Cloudflare Turnstile bot protection -->
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAACscmaMVveLnEmmi"></div>
+
         <button type="submit" class="btn">Submit Feedback</button>
         <p id="feedback-status" class="form-status" aria-live="polite"></p>
       </form>
@@ -102,6 +105,7 @@
   </footer>
 
   <script src="site.js"></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
 </body>
 </html>
 
