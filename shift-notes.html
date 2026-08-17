@@ -27,15 +27,15 @@
   </div></header>
   <main class="section"><div class="container">
     <h1>Staff Shift Notes</h1><p>Submit the details and notes for your completed shift.</p>
-    <form class="contact-form" action="/api/submit-shift-note" method="POST" data-ajax-form data-status-id="shift-note-status" data-success-message="Thank you. The shift note has been submitted successfully.">
+    <form class="contact-form" action="/api/submit-shift-note" method="POST" data-ajax-form data-unlimited-text="true" data-status-id="shift-note-status" data-success-message="Thank you. The shift note has been submitted successfully.">
       <input type="hidden" name="form_type" value="shift_note" />
       <input type="hidden" name="source_page" value="shift-notes.html" />
       <label for="shift-date">Date:</label><input type="date" id="shift-date" name="date" required />
-      <label for="participant">Participant:</label><input type="text" id="participant" name="participant" maxlength="150" required />
-      <label for="staff-name">Staff Name:</label><input type="text" id="staff-name" name="staff_name" maxlength="150" required />
+      <label for="participant">Participant:</label><input type="text" id="participant" name="participant" required />
+      <label for="staff-name">Staff Name:</label><input type="text" id="staff-name" name="staff_name" required />
       <label for="shift-start">Shift Start Time:</label><input type="time" id="shift-start" name="shift_start" required />
       <label for="shift-end">Shift End Time:</label><input type="time" id="shift-end" name="shift_end" required />
-      <label for="notes">Notes:</label><textarea id="notes" name="notes" rows="8" maxlength="3000" required></textarea>
+      <label for="notes">Notes:</label><textarea id="notes" name="notes" rows="8" required></textarea>
       <button type="submit" class="btn">Submit Shift Note</button><p id="shift-note-status" class="form-status" aria-live="polite"></p>
     </form>
   </div></main>

@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 import { readCookie, verifySessionToken } from "../lib/auth.js";
 
 const MAX_BODY_BYTES = 64 * 1024;
-const LIMITS = { date: 10, participant: 150, staff_name: 150, shift_start: 5, shift_end: 5, notes: 3000 };
+const LIMITS = { date: 10, participant: null, staff_name: null, shift_start: 5, shift_end: 5, notes: null };
 
 function json(response, status, payload) {
   return response.status(status).json(payload);
@@ -52,7 +52,7 @@ function validate(body) {
   for (const [name, maximum] of Object.entries(LIMITS)) {
     fields[name] = name === "notes" ? cleanText(body[name]) : cleanSingleLine(body[name]);
     if (!fields[name]) errors.push({ field: name, message: `${name.replaceAll("_", " ")} is required.` });
-    else if (fields[name].length > maximum) errors.push({ field: name, message: `${name.replaceAll("_", " ")} is too long.` });
+    else if (maximum !== null && fields[name].length > maximum) errors.push({ field: name, message: `${name.replaceAll("_", " ")} is too long.` });
   }
   if (fields.date && !/^\d{4}-\d{2}-\d{2}$/.test(fields.date)) errors.push({ field: "date", message: "Date is invalid." });
   for (const name of ["shift_start", "shift_end"]) {

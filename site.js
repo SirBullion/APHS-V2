@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const emailInput = form.querySelector('input[type="email"]');
     const phoneInput = form.querySelector('input[type="tel"]');
     const nameInputs = form.querySelectorAll(nameFieldSelector);
-    const messageFields = form.querySelectorAll("textarea");
+    const messageFields = form.dataset.unlimitedText === "true" ? [] : form.querySelectorAll("textarea");
 
     nameInputs.forEach((nameInput) => {
       nameInput.addEventListener("input", () => {
